@@ -1,8 +1,35 @@
 [
   {
-    "id": "20250119155246_1",
-    "name": "dddd",
-    "created_at": "2025-01-19T15:52:46.554913",
-    "status": "active"
+    "id": "20250119194259_1",
+    "name": "test",
+    "created_at": "2025-01-19T19:42:59.450024",
+    "status": "active",
+    "creator": "jon",
+    "players": [
+      {
+        "username": "jon",
+        "slot": 0,
+        "team": "Red Bull Racing"
+      },
+      {
+        "username": "a",
+        "slot": 1,
+        "team": "Alpine"
+      }
+    ]
+  },
+  {
+    "id": "20250119194747_1",
+    "name": "kkk",
+    "created_at": "2025-01-19T19:47:47.352655",
+    "status": "active",
+    "creator": "jon",
+    "players": [
+      {
+        "username": "jon",
+        "slot": 0,
+        "team": null
+      }
+    ]
   }
 ]

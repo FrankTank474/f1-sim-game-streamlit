@@ -1,0 +1,14 @@
+{
+  "jon": {
+    "password_hash": "69f81ca7f1ce0a0f9b04f82271707dda6cce7b1f0bc2525d03ab4295b1ba4d3b",
+    "salt": "776261593644daffc4f1a532b1180fae"
+  },
+  "frank": {
+    "password_hash": "ba9345b11bf17542c164d6458d6209079c8345e3f1cefa80e778d6bb7c883898",
+    "salt": "69897de75a8fe476ea067e146cc0b531"
+  },
+  "a": {
+    "password_hash": "38e01603465233b2fdf6c1e919684d82faae38c9bced622b2c9d3f7335096b08",
+    "salt": "4724c80055cdffc4324036d059bccf7c"
+  }
+}
