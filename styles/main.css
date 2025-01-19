@@ -1,3 +1,24 @@
+/* Add these at the top of your existing CSS */
+.stApp {
+    min-height: 100vh;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Add these visibility rules */
+.element-container, .stMarkdown {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
 .big-title {
     font-size: 4rem;
     font-weight: bold;
