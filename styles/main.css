@@ -250,3 +250,25 @@ table, th, td {
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 [data-testid="collapsedControl"] {display: none;}
+
+.ready-button-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ready-button-container button {
+    background-color: #10B981;  /* A nice green color for ready */
+}
+
+.ready-button-container button:hover {
+    background-color: #059669;
+}
+
+/* Style for disabled button */
+.ready-button-container button:disabled {
+    background-color: #D1D5DB;
+    cursor: not-allowed;
+}

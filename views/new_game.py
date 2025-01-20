@@ -1,5 +1,5 @@
 import streamlit as st
-from utils.state import navigate_back
+from utils.state import navigate_back, navigate_to
 from game.manager import GameManager
 
 # F1 Teams for 2024
@@ -30,6 +30,7 @@ def init_game_state():
         st.session_state.game_state = None
 
 def select_team(team: str):
+    """Handle team selection for a player"""
     try:
         game_manager = GameManager()
         game = game_manager.select_team(
@@ -43,7 +44,18 @@ def select_team(team: str):
     except ValueError as e:
         st.error(str(e))
 
+def start_game():
+    """Transition to game start state"""
+    try:
+        game_manager = GameManager()
+        game = game_manager.update_game_state(st.session_state.game_id, 'started')
+        st.session_state.game_state = game
+        navigate_to('game_start')
+    except Exception as e:
+        st.error(f"Error starting game: {e}")
+
 def show():
+    """Main view function for the game setup screen"""
     # Initialize state and manager
     init_game_state()
     game_manager = GameManager()
@@ -157,5 +169,24 @@ def show():
                     type="primary" if is_selected else "secondary"
                 ):
                     select_team(team)
+    
+    # Add Ready button at the bottom
+    st.markdown('<div class="ready-button-container">', unsafe_allow_html=True)
+    
+    # Only enable Ready button if player has selected a team
+    is_ready = st.session_state.selected_team is not None
+    if st.button(
+        "Ready!", 
+        key="ready_button",
+        disabled=not is_ready,
+        type="primary" if is_ready else "secondary",
+        use_container_width=True
+    ):
+        start_game()
+    
+    if not is_ready:
+        st.info("Please select a team before starting the game")
+    
+    st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown('</div>', unsafe_allow_html=True)

@@ -182,3 +182,29 @@ class GameManager:
         except Exception as e:
             logger.error(f"Error getting games: {e}")
             raise
+
+
+    def update_game_state(self, game_id: str, new_status: str) -> Dict:
+        """
+        Updates the game status
+        Returns the updated game dictionary
+        """
+        try:
+            games = self._load_games()
+            
+            # Find the game to update
+            game = next((game for game in games if game['id'] == game_id), None)
+            if not game:
+                raise ValueError(f"Game {game_id} not found")
+                
+            # Update the status
+            game['status'] = new_status
+            
+            # Save updated games list
+            self._save_games(games)
+            logger.info(f"Successfully updated game {game_id} status to {new_status}")
+            return game
+            
+        except Exception as e:
+            logger.error(f"Error updating game {game_id} status: {e}")
+            raise
