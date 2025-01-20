@@ -32,6 +32,8 @@ def show():
                         new_game = game_manager.create_game(game_name, st.session_state.user)
                         st.session_state.game_name = game_name
                         st.session_state.game_id = new_game['id']
+                        # Clear any existing game state when creating a new game
+                        st.session_state.game_state = None
                         navigate_to('new_game')
                     except Exception as e:
                         st.error(f"Error creating game: {str(e)}")
@@ -69,10 +71,14 @@ def show():
                     with col3:
                         if st.button("Join", key=f"join_{game['id']}", type="secondary", use_container_width=True):
                             try:
-                                game = game_manager.join_game(game['id'], st.session_state.user)
+                                updated_game = game_manager.join_game(game['id'], st.session_state.user)
                                 st.session_state.game_name = game['name']
                                 st.session_state.game_id = game['id']
-                                navigate_to('new_game')
+                                
+                                # Navigate based on game phase
+                                destination = game_manager.get_game_destination(updated_game)
+                                navigate_to(destination)
+                                
                             except ValueError as e:
                                 st.error(str(e))
                     with col4:

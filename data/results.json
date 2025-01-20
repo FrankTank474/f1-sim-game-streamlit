@@ -49,5 +49,64 @@
         "team": "Haas F1"
       }
     ]
+  },
+  "20250120190408_1": {
+    "timestamp": "2025-01-20T19:04:40.226888",
+    "drivers_championship": {
+      "winner": "Visa Cash App RB",
+      "is_ai": true,
+      "player": "AI_Visa Cash App RB"
+    },
+    "constructors_championship": {
+      "winner": "Williams",
+      "is_ai": true,
+      "player": "AI_Williams"
+    },
+    "players": [
+      {
+        "username": "a",
+        "slot": 0,
+        "team": "Red Bull Racing"
+      }
+    ]
+  },
+  "20250120201419_1": {
+    "timestamp": "2025-01-20T21:26:35.943652",
+    "drivers_championship": {
+      "winner": "Haas F1",
+      "is_ai": true,
+      "player": "AI_Haas F1"
+    },
+    "constructors_championship": {
+      "winner": "Ferrari",
+      "is_ai": true,
+      "player": "AI_Ferrari"
+    },
+    "players": [
+      {
+        "username": "a",
+        "slot": 0,
+        "team": "Red Bull Racing"
+      }
+    ]
+  },
+  "20250120213020_1": {
+    "timestamp": "2025-01-20T21:30:32.910058",
+    "drivers_championship": {
+      "driver": "Pierre Gasly",
+      "team": "Alpine",
+      "is_ai": true
+    },
+    "constructors_championship": {
+      "team": "McLaren",
+      "is_ai": true
+    },
+    "players": [
+      {
+        "username": "a",
+        "slot": 0,
+        "team": "Ferrari"
+      }
+    ]
   }
 }

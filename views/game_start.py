@@ -34,7 +34,14 @@ def show():
             with col1:
                 st.write(player['username'])
             with col2:
-                st.write(player['team'] if player['team'] else "No team selected")
+                team = player['team']
+                if team:
+                    st.write(team)
+                    if 'drivers' in game and team in game['drivers']:
+                        drivers = game['drivers'][team]
+                        st.write(f"Drivers: {', '.join(drivers)}")
+                else:
+                    st.write("No team selected")
         
         # Show AI players
         taken_teams = {p['team'] for p in game['players'] if p['team']}

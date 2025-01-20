@@ -18,13 +18,13 @@ def show():
         if driver_winner['is_ai']:
             st.markdown(
                 f'<div class="result-box ai-winner">'
-                f'🏆 AI Wins! {driver_winner["winner"]}</div>',
+                f'🏆 {driver_winner["driver"]} of {driver_winner["team"]}</div>',
                 unsafe_allow_html=True
             )
         else:
             st.markdown(
                 f'<div class="result-box player-winner">'
-                f'🏆 Champion: {driver_winner["player"]} with {driver_winner["winner"]}</div>',
+                f'🏆 {driver_winner["driver"]} of {driver_winner["team"]}</div>',
                 unsafe_allow_html=True
             )
         
@@ -35,13 +35,13 @@ def show():
         if constructor_winner['is_ai']:
             st.markdown(
                 f'<div class="result-box ai-winner">'
-                f'🏆 AI Wins! {constructor_winner["winner"]}</div>',
+                f'🏆 {constructor_winner["team"]}</div>',
                 unsafe_allow_html=True
             )
         else:
             st.markdown(
                 f'<div class="result-box player-winner">'
-                f'🏆 Champion: {constructor_winner["player"]} with {constructor_winner["winner"]}</div>',
+                f'🏆 {constructor_winner["team"]}</div>',
                 unsafe_allow_html=True
             )
         

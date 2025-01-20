@@ -1,9 +1,13 @@
 import streamlit as st
 from components.styles import get_css
 from utils.state import init_session_state
-from views import welcome, new_game, login, game_start, results
+from views import welcome, new_game, login, game_start, results, select_drivers, pre_season
 
 def main():
+    """
+    Main entry point for the F1 Simulator application.
+    Handles page configuration, routing, and session state.
+    """
     # Configure the basic page settings
     st.set_page_config(
         page_title="F1 Simulator",
@@ -16,7 +20,7 @@ def main():
     # Initialize session state variables (like user login status, current page, etc.)
     init_session_state()
 
-    # Simple router to show different pages based on the current state
+    # Route to appropriate page based on session state
     if st.session_state.page == 'login':
         # Show login page if we're on the login page
         login.show()
@@ -30,6 +34,12 @@ def main():
     elif st.session_state.page == 'new_game':
         # Show new game page (team selection)
         new_game.show()
+    elif st.session_state.page == 'select_drivers':
+        # Show driver selection page
+        select_drivers.show()
+    elif st.session_state.page == 'pre_season':
+        # Show pre-season development page
+        pre_season.show()
     elif st.session_state.page == 'game_start':
         # Show game start page (final lineup and start button)
         game_start.show()
