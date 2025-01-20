@@ -1,5 +1,5 @@
 {
-  "game_id": "20250119194259_1",
+  "game_id": "20250120064227_1",
   "drivers_championship": {
     "winner": "Ferrari",
     "is_ai": true,
@@ -9,5 +9,45 @@
     "winner": "Ferrari",
     "is_ai": true,
     "player": "AI_Ferrari"
+  },
+  "20250120064227_1": {
+    "timestamp": "2025-01-20T06:50:36.586562",
+    "drivers_championship": {
+      "winner": "Haas F1",
+      "is_ai": true,
+      "player": "AI_Haas F1"
+    },
+    "constructors_championship": {
+      "winner": "Aston Martin",
+      "is_ai": true,
+      "player": "AI_Aston Martin"
+    },
+    "players": [
+      {
+        "username": "a",
+        "slot": 0,
+        "team": "Alpine"
+      }
+    ]
+  },
+  "20250120065230_1": {
+    "timestamp": "2025-01-20T06:52:36.056458",
+    "drivers_championship": {
+      "winner": "Kick Sauber",
+      "is_ai": true,
+      "player": "AI_Kick Sauber"
+    },
+    "constructors_championship": {
+      "winner": "Red Bull Racing",
+      "is_ai": true,
+      "player": "AI_Red Bull Racing"
+    },
+    "players": [
+      {
+        "username": "a",
+        "slot": 0,
+        "team": "Haas F1"
+      }
+    ]
   }
 }
