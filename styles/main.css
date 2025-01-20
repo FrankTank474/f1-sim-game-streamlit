@@ -246,6 +246,39 @@ table, th, td {
     visibility: visible !important;
 }
 
+/* Results page styles */
+.result-box {
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.player-winner {
+    background-color: #DC2626;
+    color: white;
+}
+
+.ai-winner {
+    background-color: #4682B4;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* Hide Streamlit branding */
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}

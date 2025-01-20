@@ -1,0 +1,13 @@
+{
+  "game_id": "20250119194259_1",
+  "drivers_championship": {
+    "winner": "Ferrari",
+    "is_ai": true,
+    "player": "AI_Ferrari"
+  },
+  "constructors_championship": {
+    "winner": "Ferrari",
+    "is_ai": true,
+    "player": "AI_Ferrari"
+  }
+}
